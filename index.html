@@ -16,31 +16,31 @@
 
 <body>
   <section id="cover">
-    <video class = "fullscreen canvas-center" playsinline ="" autoplay = "" muted = "" loop="">
+    <video class="fullscreen canvas-center" playsinline="" autoplay="" muted="" loop="">
       <source src="assets/intro.mp4" type="video/mp4">
     </video>
-    <div id = "intro">
+    <div id="intro">
       <h1> A GeoNarrative Template</h1>
       <h5> This line is a placeholder for subtitle</h5>
       <p> This section shows where active research is happening, and on what topics to communicate on-going nature of scientific learning. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-          ligula
-          eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-          fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
-          vulputate
-          eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-          Etiam
-          ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-          vel,
-          luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
-          amet
-          nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+        ligula
+        eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+        vulputate
+        eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+        Etiam
+        ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+        vel,
+        luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit
+        amet
+        nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
       </p>
 
       <div class="footnote">
-         <span> This line is a place holder for copyright note or other footnotes.</span>
-         <a target="_blank" href="https://www.uw.edu"> <img src="img/uw_logo.png" width="50px"></a>
-       </div>
-     </div>
+        <span> This line is a place holder for copyright note or other footnotes.</span>
+        <a target="_blank" href="https://www.uw.edu"> <img src="img/uw_logo.png" width="50px"></a>
+      </div>
+    </div>
 
   </section>
 
@@ -58,7 +58,7 @@
     <article class="scene" data-scene="2">
       <h2>STEP 3: After Lockdown Crime Map</h2>
     </article>
-    <article class ="scene" data-scene="3">
+    <article class="scene" data-scene="3">
       <h2>STEP 4: Potential Dashboard/Graphs</h2>
     </article>
     <article class="scene" data-scene="4">
@@ -70,9 +70,9 @@
     </article>
     <article class="scene" data-scene="5">
       <h2>STEP 6: Image </h2>
-      <img src = "" </img>
+      <img src="" </img>
     </article>
-    <article class = "scene fullscreen" data-scene="6">
+    <article class="scene fullscreen" data-scene="6">
       <h2>STEP 7: Ending Page</h2>
     </article>
   </section>
@@ -80,6 +80,143 @@
   <section id="footer">
     <h2>FOOTER</h2>
   </section>
+
+  <script>
+    // 1. Select those elments that wil be frequent used.
+    var storyboard = $("#storyboard");
+    var scene = $(".scene");
+
+    // 2. Declare the maps, thematic layers and the base maps/layers.
+    var map, polygonLayer, pointLayer, lightBasemap, satelliteBasemap;
+
+    // 3. Initialize the geonarrative structure using scrollama
+    var scriptPanel = scrollama();
+
+    // 4. Define Generic window resize listener event
+    function handleResize() {}
+      // update the height of each scene elements
+      var sceneH = Math.floor(window.innerHeight * 0.75);
+      scene.css("height", sceneH + "px");
+
+      var storyboardHeight = window.innerHeight;
+      var storyboardMarginTop = (window.innerHeight - storyboardHeight) / 2;
+
+      storyboard
+        .css("height", storyboardHeight + "px")
+        .css("top", storyboardMarginTop + "px");
+
+      // tell scrollama to update new element dimensions
+      scriptPanel.resize();
+    }
+
+    // 5. The function performs when a scene enters the storyboard
+    function handleSceneEnter(response) {}
+      var index = response.index;
+
+      if (index === 0) {
+        map.setView(new L.LatLng(47.33, -121.93), 8);
+        map.addLayer(polygonLayer);
+      } else if (index === 1) {
+        map.setView(new L.LatLng(47.33, -121.93), 8);
+        map.addLayer(pointLayer);
+      } else if (index === 2) {
+        //Relocate toSeattle
+        map.setView(new L.LatLng(47.6131229, -122.4121036), 12);
+      } else if (index === 3) {
+        //Relocate toPortland
+        map.setView(new L.LatLng(45.5428119, -122.7243662), 12);
+        map.addLayer(satelliteBasemap);
+      } else if (index === 6) {
+        map.setView(new L.LatLng(47.6131229, -122.4121036), 12);
+        $("#cover").css("visibility", "hidden");
+      }
+    }
+
+    // 6. The function performs when a scene exits the storyboard
+    function handleSceneExit(response) {
+      var index = response.index;
+
+      if (index === 0) {
+        map.removeLayer(polygonLayer);
+      } else if (index === 1) {
+        map.removeLayer(pointLayer);
+      } else if (index === 3) {
+        //exit to Portland
+        map.removeLayer(satelliteBasemap);
+      } else if (index === 6) {
+        $("#cover").css("visibility", "visible");
+      }
+    }
+    // 6. The function performs when a scene exits the storyboard
+    function handleSceneExit(response) {
+      var index = response.index;
+
+      if (index === 0) {
+        map.removeLayer(polygonLayer);
+      } else if (index === 1) {
+        map.removeLayer(pointLayer);
+      } else if (index === 3) {
+        //exit to Portland
+        map.removeLayer(satelliteBasemap);
+      } else if (index === 6) {
+        $("#cover").css("visibility", "visible");
+      }
+    }
+
+    // 7. the function performs when this html document is ready.
+    $(document).ready(function() {
+      // 8. Intialize the layout.
+      // Force a resize on load to ensure proper dimensions are sent to scrollama
+      handleResize();
+      window.scrollTo(0, 0);
+      // Bind the resize function to the window resize event
+      window.addEventListener("resize", handleResize);
+
+      // 9. Use a promise mechnism to asynchrously load the required geojson datasets.
+      Promise.all([
+        $.getJSON("assets/wacountydata.geojson"),
+        $.getJSON("assets/celltowers.geojson")
+      ]).then(function(datasets) {
+
+        // 10. After the data are successfully loaded, the then funciton will execute in order to
+        //    a) preprocess the data as map layers
+        //    b) initialize the script panel
+        //    c) initialize the map and layers.
+
+
+        polygonLayer = L.geoJSON(datasets[0]);
+        pointLayer = L.geoJSON(datasets[1]);
+
+        scriptPanel
+          .setup({
+            step: ".scene", // all the scenes.
+            offset: 0.33,   // the location of the enter and exit trigger
+            // debug: true  // toggler on or off the debug mode.
+          })
+          .onStepEnter(handleSceneEnter)
+          .onStepExit(handleSceneExit);
+      });
+
+
+      map = L.map('map', {
+        center: [47.33, -121.93],
+        zoom: 7,
+        scrollWheelZoom: false,
+        zoomControl: false,
+        maxZoom: 10,
+        minZoom: 3,
+        detectRetina: true // detect whether the sceen is high resolution or not.
+      });
+
+
+      lightBasemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png');
+      satelliteBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+      map.addLayer(lightBasemap);
+
+    });
+  </script>
+
+
 
 </body>
 
