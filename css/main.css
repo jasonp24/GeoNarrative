@@ -125,6 +125,28 @@ p {
   text-shadow: 0 0 6px white;
 }
 
+[data-scene="0"] {
+  font-size: xxx-large;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+[data-scene="1"] {
+  font-size: xxx-large;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+[data-scene="2"] {
+  font-size: xxx-large;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.scene h2 {
+  background-color: rgba(0, 0, 0, 0.0);
+  font-size: xx-large;
+  color: black;
+  text-shadow: 0 0 1px black;
+}
+
 [data-scene="4"] div {
   font-size: xxx-large;
 }
@@ -141,7 +163,7 @@ p {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: 100%;
   margin: 0 auto 0 auto !important;
-  height: 100vh !important;
+  height: 250vh !important;
 }
