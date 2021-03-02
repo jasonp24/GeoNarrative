@@ -125,17 +125,17 @@
 
       if (index === 0) {
         map.setView(new L.LatLng(47.33, -121.93), 8);
-        //map.addLayer(polygonLayer);
+        map.addLayer(polygonLayer);
       } else if (index === 1) {
         map.setView(new L.LatLng(47.33, -121.93), 8);
-        //map.addLayer(pointLayer);
+        map.addLayer(pointLayer);
       } else if (index === 2) {
         //Relocate to Seattle
         map.setView(new L.LatLng(47.6131229, -122.4121036), 12);
       } else if (index === 3) {
         //Relocate to Portland
         map.setView(new L.LatLng(45.5428119, -122.7243662), 12);
-        //map.addLayer(satelliteBasemap);
+        map.addLayer(satelliteBasemap);
       } else if (index === 6) {
         map.setView(new L.LatLng(47.6131229, -122.4121036), 12);
         $("#cover").css("visibility", "hidden");

@@ -163,6 +163,7 @@ p {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+
   background-size: 100%;
   margin: 0 auto 0 auto !important;
   height: 250vh !important;
