@@ -54,13 +54,13 @@
     </div>
 
     <article class="scene" data-scene="0">
-      <h2>STEP 1: Pre-Lockdown Crime Map</h2>
+      <h2>STEP 1: First Half Robberies Map</h2>
     </article>
     <article class="scene" data-scene="1">
-      <h2>STEP 2: During Lockdown Crime Map</h2>
+      <h2>STEP 2: Second Half Robberies Map</h2>
     </article>
     <article class="scene" data-scene="2">
-      <h2>STEP 3: After Lockdown Crime Map</h2>
+      <h2>STEP 3: Full Year Robberies Map</h2>
     </article>
     <article class="scene" data-scene="3">
       <h2>STEP 4: Potential Dashboard/Graphs</h2>
@@ -124,14 +124,14 @@
       var index = response.index;
 
       if (index === 0) {
-        map.setView(new L.LatLng(47.33, -121.93), 8);
+        map.setView(new L.LatLng(47.6628, -122.3139), 15);
         map.addLayer(polygonLayer);
       } else if (index === 1) {
-        map.setView(new L.LatLng(47.33, -121.93), 8);
+        map.setView(new L.LatLng(47.6628, -122.3139), 15);
         map.addLayer(pointLayer);
       } else if (index === 2) {
-        //Relocate to Seattle
-        map.setView(new L.LatLng(47.6131229, -122.4121036), 12);
+        map.setView(new L.LatLng(47.6628, -122.3139), 15);
+        
       } else if (index === 3) {
         //Relocate to Portland
         map.setView(new L.LatLng(45.5428119, -122.7243662), 12);
@@ -170,8 +170,8 @@
 
       // 9. Use a promise mechnism to asynchrously load the required geojson datasets.
       Promise.all([
-        $.getJSON("assets/wacountydata.geojson"),
-        $.getJSON("assets/celltowers.geojson")
+        $.getJSON("assets/First_Half_Robberies.geojson"),
+        $.getJSON("assets/Second_Half_Robberies.geojson")
       ]).then(function(datasets) {
 
         // 10. After the data are successfully loaded, the then funciton will execute in order to
@@ -199,7 +199,7 @@
         zoom: 7,
         scrollWheelZoom: false,
         zoomControl: false,
-        maxZoom: 10,
+        maxZoom: 100,
         minZoom: 3,
         detectRetina: true // detect whether the sceen is high resolution or not.
       });
