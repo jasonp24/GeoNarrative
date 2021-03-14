@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="GeoNarrative Template" />
+  <meta name="description" content="U District Robberies" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GeoNarrative Project</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
@@ -18,172 +18,172 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/2.2.1/scrollama.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
   <style>
+    .site-footer {
+      background-color: #26272b;
+      padding: 45px 0 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #737373;
+    }
+
+    .site-footer hr {
+      border-top-color: #bbb;
+      opacity: 0.5
+    }
+
+    .site-footer hr.small {
+      margin: 20px 0
+    }
+
+    .site-footer h6 {
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      letter-spacing: 2px
+    }
+
+    .site-footer a {
+      color: #737373;
+    }
+
+    .site-footer a:hover {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      padding-left: 0;
+      list-style: none
+    }
+
+    .footer-links li {
+      display: block
+    }
+
+    .footer-links a {
+      color: #737373
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    .footer-links.inline li {
+      display: inline-block
+    }
+
+    .site-footer .social-icons {
+      text-align: right
+    }
+
+    .site-footer .social-icons a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: #33353d
+    }
+
+    .copyright-text {
+      margin: 0
+    }
+
+    @media (max-width:991px) {
+      .site-footer [class^=col-] {
+        margin-bottom: 30px
+      }
+    }
+
+    @media (max-width:767px) {
       .site-footer {
-        background-color: #26272b;
-        padding: 45px 0 20px;
-        font-size: 15px;
-        line-height: 24px;
-        color: #737373;
+        padding-bottom: 0
       }
 
-      .site-footer hr {
-        border-top-color: #bbb;
-        opacity: 0.5
-      }
-
-      .site-footer hr.small {
-        margin: 20px 0
-      }
-
-      .site-footer h6 {
-        color: #fff;
-        font-size: 16px;
-        text-transform: uppercase;
-        margin-top: 5px;
-        letter-spacing: 2px
-      }
-
-      .site-footer a {
-        color: #737373;
-      }
-
-      .site-footer a:hover {
-        color: #3366cc;
-        text-decoration: none;
-      }
-
-      .footer-links {
-        padding-left: 0;
-        list-style: none
-      }
-
-      .footer-links li {
-        display: block
-      }
-
-      .footer-links a {
-        color: #737373
-      }
-
-      .footer-links a:active,
-      .footer-links a:focus,
-      .footer-links a:hover {
-        color: #3366cc;
-        text-decoration: none;
-      }
-
-      .footer-links.inline li {
-        display: inline-block
-      }
-
+      .site-footer .copyright-text,
       .site-footer .social-icons {
-        text-align: right
+        text-align: center
       }
+    }
 
-      .site-footer .social-icons a {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        margin-left: 6px;
-        margin-right: 0;
-        border-radius: 100%;
-        background-color: #33353d
-      }
+    .social-icons {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none
+    }
 
-      .copyright-text {
-        margin: 0
-      }
+    .social-icons li {
+      display: inline-block;
+      margin-bottom: 4px
+    }
 
-      @media (max-width:991px) {
-        .site-footer [class^=col-] {
-          margin-bottom: 30px
-        }
-      }
+    .social-icons li.title {
+      margin-right: 15px;
+      text-transform: uppercase;
+      color: #96a2b2;
+      font-weight: 700;
+      font-size: 13px
+    }
 
-      @media (max-width:767px) {
-        .site-footer {
-          padding-bottom: 0
-        }
+    .social-icons a {
+      background-color: #eceeef;
+      color: #818a91;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 100%;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear
+    }
 
-        .site-footer .copyright-text,
-        .site-footer .social-icons {
-          text-align: center
-        }
-      }
+    .social-icons a:active,
+    .social-icons a:focus,
+    .social-icons a:hover {
+      color: #fff;
+      background-color: #29aafe
+    }
 
-      .social-icons {
-        padding-left: 0;
-        margin-bottom: 0;
-        list-style: none
-      }
+    .social-icons.size-sm a {
+      line-height: 34px;
+      height: 34px;
+      width: 34px;
+      font-size: 14px
+    }
 
-      .social-icons li {
-        display: inline-block;
-        margin-bottom: 4px
-      }
+    .social-icons a.facebook:hover {
+      background-color: #3b5998
+    }
 
+    .social-icons a.twitter:hover {
+      background-color: #00aced
+    }
+
+    .social-icons a.linkedin:hover {
+      background-color: #007bb6
+    }
+
+    .social-icons a.dribbble:hover {
+      background-color: #ea4c89
+    }
+
+    @media (max-width:767px) {
       .social-icons li.title {
-        margin-right: 15px;
-        text-transform: uppercase;
-        color: #96a2b2;
-        font-weight: 700;
-        font-size: 13px
+        display: block;
+        margin-right: 0;
+        font-weight: 600
       }
-
-      .social-icons a {
-        background-color: #eceeef;
-        color: #818a91;
-        font-size: 16px;
-        display: inline-block;
-        line-height: 44px;
-        width: 44px;
-        height: 44px;
-        text-align: center;
-        margin-right: 8px;
-        border-radius: 100%;
-        -webkit-transition: all .2s linear;
-        -o-transition: all .2s linear;
-        transition: all .2s linear
-      }
-
-      .social-icons a:active,
-      .social-icons a:focus,
-      .social-icons a:hover {
-        color: #fff;
-        background-color: #29aafe
-      }
-
-      .social-icons.size-sm a {
-        line-height: 34px;
-        height: 34px;
-        width: 34px;
-        font-size: 14px
-      }
-
-      .social-icons a.facebook:hover {
-        background-color: #3b5998
-      }
-
-      .social-icons a.twitter:hover {
-        background-color: #00aced
-      }
-
-      .social-icons a.linkedin:hover {
-        background-color: #007bb6
-      }
-
-      .social-icons a.dribbble:hover {
-        background-color: #ea4c89
-      }
-
-      @media (max-width:767px) {
-        .social-icons li.title {
-          display: block;
-          margin-right: 0;
-          font-weight: 600
-        }
-      }
-    </style>
+    }
+  </style>
 </head>
 
 <body>
@@ -192,7 +192,7 @@
       <source src="assets/intro.mp4" type="video/mp4">
     </video>
     <div id="intro">
-      <h1> A GeoNarrative Template</h1>
+      <h1> Robberies in the U-District in 2020</h1>
       <h5> This line is a placeholder for subtitle</h5>
       <p> This section shows where active research is happening, and on what topics to communicate on-going nature of scientific learning. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula
@@ -222,93 +222,116 @@
     </div>
 
     <article class="scene" data-scene="0">
-      <h2>STEP 1: First Half Robberies Map</h2>
-    </article>
-    <article class="scene" data-scene="1">
-      <h2>STEP 2: Second Half Robberies Map</h2>
-    </article>
-    <article class="scene" data-scene="2">
-      <h2>STEP 3: Full Year Robberies Map</h2>
-    </article>
-    <article class="scene" data-scene="3">
-      <h2>STEP 4: Potential Dashboard/Graphs</h2>
-    </article>
-    <article class="scene" data-scene="4">
-      <h2>STEP 5: Text Script</h2>
-      <p>This section shows where active research is happening, and on what topics to communicate on-going nature of scientific learning. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+      <h2>Jan. 1st - June 30th Robberies 2020</h2>
+      <p style="font-size:35%;">This section shows where active research is happening, and on what topics to communicate on-going nature of scientific learning. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+        dolor. Aenean massa.
         Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
         vulputate eget, arcu. In enim justo, rhoncus ut, imperdet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate.
       </p>
       <hr>
       <div>
-        <p><i class="fa fa-users"></i> <span>2,823</span>
+        <p><i class="fa fa-legal"></i> <span>2,823</span>
         </p>
         <p><i class="fa fa-map"></i> <span>3,520</span>
         </p>
       </div>
     </article>
+    <article class="scene" data-scene="1">
+      <h2>July 1st - December 31st Robberies 2020</h2>
+      <p style="font-size:35%;">This section shows where active research is happening, and on what topics to communicate on-going nature of scientific learning. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+        dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+        vulputate eget, arcu. In enim justo, rhoncus ut, imperdet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate.
+      </p>
+      <hr>
+      <div>
+        <p><i class="fa fa-legal"></i> <span>2,823</span>
+        </p>
+        <p><i class="fa fa-map"></i> <span>3,520</span>
+        </p>
+      </div>
+    </article>
+    <article class="scene" data-scene="2">
+      <h2>2020 Full Year Robberies Map</h2>
+      <p style="font-size:35%;">This section shows where active research is happening, and on what topics to communicate on-going nature of scientific learning. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+        dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+        vulputate eget, arcu. In enim justo, rhoncus ut, imperdet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate.
+      </p>
+      <hr>
+      <div>
+        <p><i class="fa fa-legal"></i> <span>2,823</span>
+        </p>
+        <p><i class="fa fa-map"></i> <span>3,520</span>
+        </p>
+      </div>
+    </article>
+    <article class="scene" data-scene="3">
+      <h1 style="color:white;">Satellite View of Robberies 2020</h1>
+    </article>
+
     <article class="scene" data-scene="5">
-      <h2>STEP 6: Image </h2>
+      <h1 style ="color:black">U District Walkthrough Video </h1>
       <iframe width="640" height="400" src="https://www.youtube.com/embed/H1nA-pKQCsM" frameborder="0" allowfullscreen></iframe>
     </article>
     <article class="scene fullscreen" data-scene="6">
-      <h2>STEP 7: Ending Page</h2>
     </article>
   </section>
 
   <section id="footer">
     <footer class="site-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                <h6>About</h6>
-                <p class="text-justify"> GeoNarrative, also being referred to as storymap, or map-based storytelling, is an visualization genre that primarily utilizes a series of maps or other types of geovisualizations to narrate a geographical event or phenomenon. In addition to geovisualization, there will be other form of information like scripts, images, or videos. </p>
-              </div>
-
-              <div class="col-xs-6 col-md-3">
-                <h6>Categories</h6>
-                <ul class="footer-links">
-                  <li><a href="http://hgis.uw.edu/category/c-language/">StoryMap</a></li>
-                  <li><a href="http://hgis.uw.edu/category/front-end-development/">Map Design</a></li>
-                  <li><a href="http://hgis.uw.edu/category/back-end-development/">Cartography</a></li>
-                  <li><a href="http://hgis.uw.edu/category/java-programming-language/">Web Mapping</a></li>
-                  <li><a href="http://hgis.uw.edu/category/android/">Advanced Digital Geographies</a></li>
-                  <li><a href="http://hgis.uw.edu/category/templates/">Templates</a></li>
-                </ul>
-              </div>
-
-              <div class="col-xs-6 col-md-3">
-                <h6>Quick Links</h6>
-                <ul class="footer-links">
-                  <li><a href="http://hgis.uw.edu/about/">About Us</a></li>
-                  <li><a href="http://hgis.uw.edu/contact/">Contact Us</a></li>
-                  <li><a href="http://hgis.uw.edu/contribute-at-scanfcode/">Contribute</a></li>
-                  <li><a href="http://hgis.uw.edu/privacy-policy/">Privacy Policy</a></li>
-                  <li><a href="http://hgis.uw.edu/sitemap/">Sitemap</a></li>
-                </ul>
-              </div>
-            </div>
-            <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify"> GeoNarrative, also being referred to as storymap, or map-based storytelling, is an visualization genre that primarily utilizes a series of maps or other types of geovisualizations to narrate a geographical event
+              or phenomenon. In addition to geovisualization, there will be other form of information like scripts, images, or videos. </p>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
-                  <a href="#">Humanistic GIS Lab</a>.
-                </p>
-              </div>
 
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <ul class="social-icons">
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="https://jasonp24.github.io/">StoryMap</a></li>
+              <li><a href="https://jasonp24.github.io/">Map Design</a></li>
+              <li><a href="https://jasonp24.github.io/">Cartography</a></li>
+              <li><a href="https://jasonp24.github.io/">Web Mapping</a></li>
+              <li><a href="https://jasonp24.github.io/">Advanced Digital Geographies</a></li>
+              <li><a href="https://jasonp24.github.io/">Templates</a></li>
+            </ul>
           </div>
-        </footer>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="https://jasonp24.github.io/">About Us</a></li>
+              <li><a href="https://jasonp24.github.io/">Contact Us</a></li>
+              <li><a href="https://jasonp24.github.io/">Contribute</a></li>
+              <li><a href="https://jasonp24.github.io/">Privacy Policy</a></li>
+              <li><a href="https://jasonp24.github.io/">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+              <a href="#">Jason Park GEOG 458</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </section>
 
   <script>
@@ -344,21 +367,23 @@
 
       if (index === 0) {
         map.setView(new L.LatLng(47.6628, -122.3139), 15);
-        map.addLayer(polygonLayer);
+        map.addLayer(polygonLayer)
+        polygonLayer.bindPopup("Robbery");
       } else if (index === 1) {
         map.setView(new L.LatLng(47.6628, -122.3139), 15);
-        map.addLayer(pointLayer);
+        map.addLayer(pointLayer)
+        pointLayer.bindPopup("Robbery");
       } else if (index === 2) {
         map.setView(new L.LatLng(47.6628, -122.3139), 15);
         map.addLayer(pointLayer2);
+        pointLayer2.bindPopup("Robbery");
       } else if (index === 3) {
         map.setView(new L.LatLng(47.6560, -122.3095), 18);
         map.addLayer(pointLayer2);
         map.addLayer(satelliteBasemap);
       } else if (index == 4) {
         map.setView(new L.LatLng(47.6628, -122.3139), 15);
-      }
-      else if (index === 5) {
+      } else if (index === 5) {
         map.setView(new L.LatLng(47.6131229, -122.4121036), 12);
         $("#cover").css("visibility", "hidden");
       }
@@ -375,8 +400,7 @@
         //map.removeLayer(satelliteBasemap);
       } else if (index == 2) {
         map.removeLayer(pointLayer2);
-      }
-      else if (index === 3) {
+      } else if (index === 3) {
         map.removeLayer(pointLayer2);
         map.removeLayer(satelliteBasemap);
       } else if (index === 6) {
@@ -433,7 +457,7 @@
       });
 
 
-      lightBasemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png');
+      lightBasemap = L.tileLayer(' https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png');
       satelliteBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
       map.addLayer(lightBasemap);
 

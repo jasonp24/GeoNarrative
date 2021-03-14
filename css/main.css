@@ -126,17 +126,22 @@ p {
 
 [data-scene="0"] {
   font-size: xxx-large;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 [data-scene="1"] {
   font-size: xxx-large;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 [data-scene="2"] {
   font-size: xxx-large;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-scene="3"] {
+  font-size: xxx-large;
+  background-color: rgba(0, 0, 0, 0.00);
 }
 
 
@@ -147,9 +152,6 @@ p {
   text-shadow: 0 0 1px black;
 }
 
-[data-scene="4"] div {
-  font-size: xxx-large;
-}
 
 [data-scene="5"] img {
   display: block;
@@ -157,6 +159,7 @@ p {
   width: 90%;
   border: 5px solid white;
 }
+
 
 [data-scene="6"] {
   background: url("../img/background.jpg") no-repeat center center;
