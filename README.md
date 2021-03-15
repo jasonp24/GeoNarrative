@@ -15,6 +15,7 @@ The goal of this project was to examine how the impact of the COVID-19 pandemic,
 The primary data source used the Seattle Police Department (SPD) Crime Data from 2008 - present that is publicly available. The link to the dataset can be seen here: 
 https://data.seattle.gov/Public-Safety/SPD-Crime-Data-2008-Present/tazs-3rd5
 
+<br>
 ## Applied Libraries
 
 The JavaScript applied libraries used to create this GeoNarrative include:
